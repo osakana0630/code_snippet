@@ -33,7 +33,7 @@ export const useScrollRestoration = (params: Params = {}) => {
     const handleScroll = () => {
       // スクロール位置をセッションストレージに保存します。
       clearTimeout(timeout);
-      timeout = setTimeout(function () {
+      timeout = setTimeout(()=> {
         sessionStorage.setItem(sessionKey, window.scrollY.toString());
       }, SCROLL_DEBOUNCE_TIME);
     };
